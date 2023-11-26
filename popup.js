@@ -5,8 +5,8 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
     const video = document.querySelector('video');
     const videoUrl = `https://www.youtube.com/watch?v=${shortId}`;
     chrome.tabs.create({ url: videoUrl, index: tabs[0].index + 1, active: false });
-  }
     if (video) {
       video.pause();
+    }
   }
 });
